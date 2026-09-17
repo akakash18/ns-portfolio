@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, UserCheck, Sparkles, X } from 'lucide-react';
 import { profileData } from '../data/profile';
+import profileImage from '../assets/nsprofile.jpg';
 
 export const About: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -119,13 +120,13 @@ export const About: React.FC = () => {
             className="lg:col-span-5 flex justify-center"
           >
             <div className="relative w-full max-w-md">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-slate-100 relative group">
+              <div className="aspect-4/5 rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-slate-100 relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" 
+                  src={profileImage}
                   alt="Nilam Shende Portrait"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 via-transparent to-transparent opacity-60" />
                 
                 {/* Data Driven Badge matching PDF Page 2 screenshot */}
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-lg flex items-center justify-between text-gray-900">

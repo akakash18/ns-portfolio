@@ -324,7 +324,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ onClose }) =
         </div>
       </div>
 
-      <div className="w-full max-w-6xl aspect-[16/9] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-800 relative">
+      <div className="w-full max-w-6xl aspect-video bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-800 relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}

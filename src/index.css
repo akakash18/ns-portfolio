@@ -1,6 +1,11 @@
 @import "tailwindcss";
 /* @config "../tailwind.config.js"; */
 
+@theme {
+  --color-teal-accent: #0f969c;
+  --color-teal-dark: #0a6b70;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

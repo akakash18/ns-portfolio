@@ -27,7 +27,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       >
         
         {/* Modal Top Header */}
-        <div className="bg-gradient-to-r from-teal-900 to-slate-900 text-white p-6 sm:p-8 relative">
+        <div className="bg-linear-to-r from-teal-900 to-slate-900 text-white p-6 sm:p-8 relative">
           <button
             onClick={onClose}
             className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
