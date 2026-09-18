@@ -75,10 +75,7 @@ export function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 text-xs text-center space-y-2">
         <p className="font-semibold text-gray-300">
-          © {new Date().getFullYear()} {profileData.name} • {profileData.title} Portfolio
-        </p>
-        <p className="text-gray-500">
-          Built with React, TypeScript, Tailwind CSS, Recharts & Framer Motion.
+          © {new Date().getFullYear()} {profileData.name} • {profileData.title}
         </p>
       </footer>
 

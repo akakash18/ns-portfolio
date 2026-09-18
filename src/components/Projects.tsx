@@ -4,9 +4,11 @@ import { Megaphone, ShoppingBag, Search, BarChart3, ArrowUpRight, Sparkles } fro
 import { projectsData } from '../data/projects';
 import type { ProjectData } from '../types';
 import { ProjectModal } from './ProjectModal';
+import { platformLogos } from '../data/logos';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const platforms = Object.entries(platformLogos);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -95,35 +97,11 @@ export const Projects: React.FC = () => {
 
         {/* Bottom Platform Logos Banner */}
         <div className="bg-white rounded-3xl p-8 border border-teal-100 shadow-card flex flex-wrap items-center justify-around gap-6 text-center">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500 text-white font-black text-xs flex items-center justify-center shadow">amzn</div>
-            <span className="font-bold text-gray-800 text-sm">Amazon</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 text-yellow-400 font-black text-xs flex items-center justify-center shadow">fk</div>
-            <span className="font-bold text-gray-800 text-sm">Flipkart</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-pink-600 text-white font-black text-xs flex items-center justify-center shadow">M</div>
-            <span className="font-bold text-gray-800 text-sm">Myntra</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-yellow-400 text-slate-950 font-black text-xs flex items-center justify-center shadow">blk</div>
-            <span className="font-bold text-gray-800 text-sm">Blinkit</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-purple-600 text-white font-black text-xs flex items-center justify-center shadow">Z</div>
-            <span className="font-bold text-gray-800 text-sm">Zepto</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-orange-600 text-white font-black text-xs flex items-center justify-center shadow">S</div>
-            <span className="font-bold text-gray-800 text-sm">Swiggy</span>
-          </div>
+          {platforms.map(([name, logo]) => (
+            <div key={name} className="flex items-center justify-center">
+              <img src={logo} alt={`${name} logo`} className="w-24 h-14 object-contain" />
+            </div>
+          ))}
         </div>
 
       </div>

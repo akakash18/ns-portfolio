@@ -3,12 +3,22 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { profileData } from "../data/profile";
 import profileImage from "../assets/nsprofile.jpg";
+import { platformLogos } from "../data/logos";
 
 interface HeroProps {
   onExploreProjects: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
+  const floatingLogos = [
+    { name: "Amazon", logo: platformLogos.Amazon, className: "top-2 left-2", animation: [0, -8, 0], duration: 4, delay: 0 },
+    { name: "Flipkart", logo: platformLogos.Flipkart, className: "top-4 right-2", animation: [0, 8, 0], duration: 3.5, delay: 0.5 },
+    { name: "Myntra", logo: platformLogos.Myntra, className: "bottom-24 right-0", animation: [0, -10, 0], duration: 4.5, delay: 1 },
+    { name: "Blinkit", logo: platformLogos.Blinkit, className: "top-28 right-0", animation: [0, 10, 0], duration: 3.8, delay: 1.5 },
+    { name: "Zepto", logo: platformLogos.Zepto, className: "bottom-20 left-0", animation: [0, -6, 0], duration: 3.2, delay: 0.8 },
+    { name: "Swiggy", logo: platformLogos.Swiggy, className: "-bottom-2 left-1/3", animation: [0, 6, 0], duration: 4.2, delay: 1.2 },
+  ];
+
   return (
     <section
       id="hero"
@@ -64,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
             </div>
 
             {/* Quick Metrics Cards */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-gray-100 max-w-2xl">
+            {/* <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-gray-100 max-w-2xl">
               {profileData.stats.map((stat, idx) => (
                 <div
                   key={idx}
@@ -78,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Column */}
@@ -101,110 +111,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
                 </div>
 
                 {/* Floating Logos */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 4,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute top-2 left-2 bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-amber-500 text-white font-black text-xs flex items-center justify-center shadow">
-                    amzn
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">
-                    amazon
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3.5,
-                    ease: "easeInOut",
-                    delay: 0.5,
-                  }}
-                  className="absolute top-4 right-2 bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600 text-yellow-400 font-black text-xs flex items-center justify-center shadow">
-                    fk
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">
-                    Flipkart
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 4.5,
-                    ease: "easeInOut",
-                    delay: 1,
-                  }}
-                  className="absolute bottom-24 right-0 bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-pink-600 text-white font-black text-xs flex items-center justify-center shadow">
-                    M
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">
-                    Myntra
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3.8,
-                    ease: "easeInOut",
-                    delay: 1.5,
-                  }}
-                  className="absolute top-28 right-0 bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-yellow-400 text-slate-950 font-black text-xs flex items-center justify-center shadow">
-                    blk
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">
-                    blinkit
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3.2,
-                    ease: "easeInOut",
-                    delay: 0.8,
-                  }}
-                  className="absolute bottom-20 left-0 bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-purple-600 text-white font-black text-xs flex items-center justify-center shadow">
-                    Z
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">zepto</span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 6, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 4.2,
-                    ease: "easeInOut",
-                    delay: 1.2,
-                  }}
-                  className="absolute -bottom-2 left-1/3 bg-white px-3.5 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-2 group hover:scale-110 transition-transform"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-orange-600 text-white font-black text-xs flex items-center justify-center shadow">
-                    S
-                  </div>
-                  <span className="text-xs font-bold text-gray-800">
-                    Swiggy
-                  </span>
-                </motion.div>
+                {floatingLogos.map((item) => (
+                  <motion.div
+                    key={item.name}
+                    animate={{ y: item.animation }}
+                    transition={{ repeat: Infinity, duration: item.duration, ease: "easeInOut", delay: item.delay }}
+                    className={`absolute ${item.className} bg-white px-3 py-2 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center group hover:scale-110 transition-transform`}
+                  >
+                    <img src={item.logo} alt={`${item.name} logo`} className="w-16 h-10 object-contain" />
+                  </motion.div>
+                ))}
               </div>
             </div>
           </motion.div>

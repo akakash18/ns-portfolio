@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Wrench } from 'lucide-react';
 import { toolsIWorkWith } from '../data/skills';
+import { toolLogos } from '../data/logos';
 
 export const Tools: React.FC = () => {
   return (
@@ -41,11 +42,15 @@ export const Tools: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center font-black text-white text-base shadow-sm group-hover:scale-110 transition-transform"
-                    style={{ backgroundColor: tool.color }}
+                  <div
+                    className="w-14 h-14 rounded-xl flex items-center justify-center font-black text-white text-base shadow-sm group-hover:scale-110 transition-transform overflow-hidden bg-white border border-gray-100"
+                    style={toolLogos[tool.name] ? undefined : { backgroundColor: tool.color }}
                   >
-                    {tool.name.slice(0, 2).toUpperCase()}
+                    {toolLogos[tool.name] ? (
+                      <img src={toolLogos[tool.name]} alt={`${tool.name} logo`} className="w-full h-full p-1.5 object-contain" />
+                    ) : (
+                      tool.name.slice(0, 2).toUpperCase()
+                    )}
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-teal-accent bg-teal-50 px-2 py-1 rounded-md">
                     Verified
