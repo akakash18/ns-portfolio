@@ -5,7 +5,7 @@ import { educationData, educationIntro } from '../data/education';
 
 export const Education: React.FC = () => {
   return (
-    <section id="education" className="py-24 bg-white relative overflow-hidden">
+    <section id="education" className="py-20 sm:py-24 bg-white relative overflow-hidden border-b border-teal-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading matching PDF Page 4 Design */}
@@ -14,7 +14,7 @@ export const Education: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16 space-y-3"
+          className="max-w-3xl mb-12 sm:mb-14 space-y-3"
         >
           <span className="text-xs font-bold text-teal-accent uppercase tracking-wider block">
             MY ACADEMIC JOURNEY
@@ -27,7 +27,7 @@ export const Education: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column: Degrees List */}
           <div className="lg:col-span-8 space-y-6">
@@ -38,7 +38,7 @@ export const Education: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-teal-100 hover:shadow-xl hover:border-teal-accent/40 transition-all duration-300 relative group flex flex-col justify-between"
+                className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border-2 border-teal-200 hover:shadow-xl hover:border-teal-accent transition-all duration-300 relative group flex flex-col justify-between"
               >
                 <div>
                   
@@ -79,7 +79,7 @@ export const Education: React.FC = () => {
                         {edu.relevantCourses.map((course, cIdx) => (
                           <span 
                             key={cIdx}
-                            className="px-3 py-1 bg-teal-50 text-teal-900 text-xs font-semibold rounded-lg border border-teal-100"
+                            className="px-3 py-1 bg-teal-50 text-teal-900 text-xs font-semibold rounded-lg border border-teal-200"
                           >
                             {course}
                           </span>

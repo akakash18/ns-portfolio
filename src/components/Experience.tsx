@@ -5,7 +5,7 @@ import { experienceData } from '../data/experience';
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-24 bg-teal-50/30 relative overflow-hidden">
+    <section id="experience" className="py-20 sm:py-24 bg-teal-50/40 relative overflow-hidden border-b border-teal-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
@@ -14,7 +14,7 @@ export const Experience: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 space-y-2"
+          className="mb-12 sm:mb-14 space-y-2"
         >
           <span className="text-xs font-bold text-teal-accent uppercase tracking-wider block">
             CAREER JOURNEY
@@ -29,7 +29,7 @@ export const Experience: React.FC = () => {
         </motion.div>
 
         {/* Experience Cards Grid */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {experienceData.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -37,7 +37,7 @@ export const Experience: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:border-teal-accent/40 shadow-card hover:shadow-2xl transition-all duration-300 relative group"
+              className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-teal-200 hover:border-teal-accent shadow-card hover:shadow-2xl transition-all duration-300 relative group"
             >
               <div>
                 

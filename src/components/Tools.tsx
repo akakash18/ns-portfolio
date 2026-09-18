@@ -6,7 +6,7 @@ import { toolLogos } from '../data/logos';
 
 export const Tools: React.FC = () => {
   return (
-    <section id="tools" className="py-20 bg-teal-50/40 relative overflow-hidden">
+    <section id="tools" className="py-20 sm:py-24 bg-teal-50/40 relative overflow-hidden border-b border-teal-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading matching PDF Page 2 UI */}
@@ -30,7 +30,7 @@ export const Tools: React.FC = () => {
         </motion.div>
 
         {/* Tools Cards Grid matching PDF Page 2 UI */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
           {toolsIWorkWith.map((tool, index) => (
             <motion.div
               key={tool.name}
@@ -38,12 +38,12 @@ export const Tools: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-white rounded-2xl p-5 shadow-card border border-teal-100/80 hover:shadow-xl hover:border-teal-accent/40 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-5 shadow-card border-2 border-teal-200 hover:shadow-xl hover:border-teal-accent transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center font-black text-white text-base shadow-sm group-hover:scale-110 transition-transform overflow-hidden bg-white border border-gray-100"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center font-black text-white text-base shadow-sm group-hover:scale-110 transition-transform overflow-hidden bg-white border border-gray-200"
                     style={toolLogos[tool.name] ? undefined : { backgroundColor: tool.color }}
                   >
                     {toolLogos[tool.name] ? (

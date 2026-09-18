@@ -8,12 +8,12 @@ export const About: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 sm:py-24 bg-white relative overflow-hidden border-b border-teal-200/80">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Quick Stats Bar Top matching PDF Page 2 UI */}
-        <div className="mb-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-teal-50/60 p-4 sm:p-6 rounded-3xl border border-teal-100">
+        <div className="mb-12 sm:mb-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 bg-teal-50/70 p-5 sm:p-6 rounded-3xl border-2 border-teal-200">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-teal-accent text-white font-black text-sm flex items-center justify-center">
               3+
@@ -55,7 +55,7 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Heading & Bio Content */}
           <motion.div
@@ -83,7 +83,7 @@ export const About: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="flex items-start gap-3 bg-teal-50/60 p-4 rounded-xl border border-teal-100">
+              <div className="flex items-start gap-3 bg-teal-50/70 p-4 rounded-xl border border-teal-200">
                 <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm">Account & Sales Management</h4>
@@ -91,7 +91,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-teal-50/60 p-4 rounded-xl border border-teal-100">
+              <div className="flex items-start gap-3 bg-teal-50/70 p-4 rounded-xl border border-teal-200">
                 <UserCheck className="w-5 h-5 text-teal-accent shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm">Amazon PPC & Ads Certification</h4>

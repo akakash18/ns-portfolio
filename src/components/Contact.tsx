@@ -26,9 +26,9 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="py-20 sm:py-24 bg-white relative overflow-hidden border-b border-teal-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Heading, Copy, Buttons */}
           <motion.div
@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-6 bg-teal-50/60 p-8 sm:p-10 rounded-3xl border border-teal-100 shadow-card space-y-6"
+            className="lg:col-span-6 bg-teal-50/70 p-6 sm:p-8 lg:p-10 rounded-3xl border-2 border-teal-200 shadow-card space-y-6"
           >
             
             {/* Email */}

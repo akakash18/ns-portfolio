@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-teal-50/30 relative overflow-hidden">
+    <section id="projects" className="py-20 sm:py-24 bg-teal-50/40 relative overflow-hidden border-b border-teal-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -50,7 +50,7 @@ export const Projects: React.FC = () => {
         </motion.div>
 
         {/* 4 Interactive Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 sm:mb-14">
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
@@ -59,7 +59,7 @@ export const Projects: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               onClick={() => setSelectedProject(project)}
-              className="bg-white rounded-3xl p-8 border-2 border-teal-accent/60 hover:border-teal-accent shadow-card hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between relative overflow-hidden"
+              className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-teal-300 hover:border-teal-accent shadow-card hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between relative overflow-hidden"
             >
               <div className="relative z-10 space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -96,7 +96,7 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Bottom Platform Logos Banner */}
-        <div className="bg-white rounded-3xl p-8 border border-teal-100 shadow-card flex flex-wrap items-center justify-around gap-6 text-center">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-teal-200 shadow-card flex flex-wrap items-center justify-around gap-6 text-center">
           {platforms.map(([name, logo]) => (
             <div key={name} className="flex items-center justify-center">
               <img src={logo} alt={`${name} logo`} className="w-24 h-14 object-contain" />
